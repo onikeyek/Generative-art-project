@@ -1,8 +1,6 @@
-#include <Milo-Audio-Classifier_inferencing.h>
-
 // ================================================================
-// MILO — Unified Firmware v1.2
-// Sensors + TinyML Audio Classifier + Face State Engine + MQTT
+// MILO — Unified Firmware v1.5 (HTTP POST ingestion, no MQTT)
+// Rotating OLED Display: Mood | Environment | Art
 // ================================================================
 
 #define EIDSP_QUANTIZE_FILTERBANK 0
@@ -16,17 +14,17 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include <WiFi.h>
-#include <PubSubClient.h>
+#include <WiFiClientSecure.h>
+#include <HTTPClient.h>
+#include <time.h>
 
-// ── Multiple WiFi networks ───────────────────────────────────────
-const char* networks[][2] = {
-  {"Username",  "Password"}, // Hotspot Username & password 
-  {"Username",  "Password"}, //Alternate Hotspot password & Username
-};
-const int   networkCount = 2;
-const char* mqtt_server  = "......."; //Input server
-const int   mqtt_port    = 1883;
-const char* mqtt_client  = "milo-esp32s3";
+#include "secrets.h" // WiFi credentials, ingest URL, and API key — see secrets.h.example
+
+// ── NTP time ─────────────────────────────────────────────────────
+const char* ntpServer   = "pool.ntp.org";
+const long  gmtOffset   = 7200;   // UTC+2 for Finland summer (EEST)
+const int   dstOffset   = 0;
+
 
 // ── Pin definitions ──────────────────────────────────────────────
 #define DHT_PIN        4
