@@ -1,5 +1,5 @@
 // ================================================================
-// MILO — Unified Firmware v1.3
+// MILO — Unified Firmware v1.5 (HTTP POST ingestion, no MQTT)
 // Rotating OLED Display: Mood | Environment | Art
 // ================================================================
 
@@ -14,15 +14,12 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include <WiFi.h>
-#include <PubSubClient.h>
+#include <WiFiClientSecure.h>
+#include <HTTPClient.h>
 #include <time.h>
 
-// ── WiFi + MQTT credentials ──────────────────────────────────────
-const char* ssid        = "Username"; //Hotspot username
-const char* password    = "Password";  // Hotspot password
-const char* mqtt_server = ".....";     // Input server
-const int   mqtt_port   = 1883;
-const char* mqtt_client = "milo-esp32s3";
+#include "secrets.h" // WiFi credentials, ingest URL, and API key — see secrets.h.example
+
 // ── NTP time ─────────────────────────────────────────────────────
 const char* ntpServer   = "pool.ntp.org";
 const long  gmtOffset   = 7200;   // UTC+2 for Finland summer (EEST)
