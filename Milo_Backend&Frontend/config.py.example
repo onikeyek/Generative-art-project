@@ -1,0 +1,4 @@
+# Copy this file to config.py and fill in your real value.
+# config.py itself is gitignored and must NEVER be committed.
+
+INGEST_API_KEY = "replace-with-your-own-secret-key"

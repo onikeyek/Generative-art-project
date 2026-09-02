@@ -1,0 +1,66 @@
+PYTHONANYWHERE WSGI SETUP — MILO BACKEND
+==========================================
+
+PythonAnywhere auto-generates a WSGI config file at a path like:
+  /var/www/yourusername_pythonanywhere_com_wsgi.py
+
+Open it from the "Web" tab (there's a link to it near the top of your
+web app's configuration page) and replace its entire contents with
+the block below. This is the ONLY PythonAnywhere-specific code you
+need — milo_backend.py itself runs unmodified.
+
+------------------------------------------------------------------
+import sys
+
+# Add your project folder to the path. Replace 'yourusername' and
+# 'mysite' with your actual PythonAnywhere username and the folder
+# you uploaded milo_backend.py into (check the Files tab if unsure).
+path = '/home/yourusername/mysite'
+if path not in sys.path:
+    sys.path.insert(0, path)
+
+from milo_backend import app as application
+------------------------------------------------------------------
+
+DEPLOYMENT CHECKLIST
+---------------------
+1. Files tab -> create a folder (e.g. "mysite") and upload:
+     - milo_backend.py
+     - requirements.txt
+
+2. Bash console -> run:
+     pip install --user -r /home/yourusername/mysite/requirements.txt
+
+3. Web tab -> Add a new web app -> Manual configuration -> Python 3.10
+   (this creates the wsgi.py file mentioned above)
+
+4. Edit the generated wsgi.py file exactly as shown above, with your
+   real username and folder name substituted in.
+
+5. Web tab -> hit the green "Reload" button.
+
+6. Test it:
+     https://yourusername.pythonanywhere.com/api/latest
+   should return the same JSON shape you saw locally.
+
+7. Test the ingest endpoint from a Bash console or your own machine:
+     curl -X POST https://yourusername.pythonanywhere.com/api/ingest \
+       -H "Content-Type: application/json" \
+       -H "X-API-Key: milo-ingest-key-2026" \
+       -d '{"temp":24.5,"humidity":45.2,"air":1200,"motion":true,"face":"content","audio":"silence"}'
+
+If step 6 or 7 fails, check the "Error log" link on the Web tab —
+it will usually show exactly which line in milo_backend.py or the
+wsgi.py file is wrong (commonly: wrong path, or a typo in the import).
+
+WHAT TO UPDATE AFTERWARD
+--------------------------
+- Arduino firmware: change `ingest_url` to
+    https://yourusername.pythonanywhere.com/api/ingest
+- Dashboard HTML (milo_dashboard.html), line ~232: change
+    const API='https://moonlight-thus-doorway.ngrok-free.dev';
+  to
+    const API='https://yourusername.pythonanywhere.com';
+  and you can remove the 'ngrok-skip-browser-warning' header from the
+  two fetch() calls, since that was only needed for ngrok's free-tier
+  browser warning page.

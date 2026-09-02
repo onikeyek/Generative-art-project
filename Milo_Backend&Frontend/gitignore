@@ -1,0 +1,6 @@
+config.py
+secrets.h
+milo.db
+__pycache__/
+*.pyc
+.DS_Store
