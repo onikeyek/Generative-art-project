@@ -139,4 +139,5 @@ Built as part of an internship project.
 - **Hardware enclosure/assembly and creative direction/branding** — Sadunni Edirisinghe
 - **Technical documentation, OLED face, and product website** — Jo-Ann Obewe
 - **Project Supervisor** - Osman Torunoglu
+- **Savonia University of Applied Science**
 
