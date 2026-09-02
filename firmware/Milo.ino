@@ -18,14 +18,7 @@
 #include <HTTPClient.h>
 #include <time.h>
 
-const char* ssid        = "Username"; // Exact name of Hotspot
-const char* password    = "Password"; // Hotspot password 
-
-// ── Backend ingestion endpoint (replaces MQTT entirely) ──────────
-// Your Flask backend's ngrok static domain, hit with a plain short
-// HTTPS POST once per second — no persistent connection to babysit.
-const char* ingest_url  = "https://naimot.pythonanywhere.com/api/ingest";
-const char* api_key     = "milo-ingest-key-2026"; // must match backend INGEST_API_KEY
+#include "secrets.h" // WiFi credentials, ingest URL, and API key — see secrets.h.example
 
 // ── NTP time ─────────────────────────────────────────────────────
 const char* ntpServer   = "pool.ntp.org";
