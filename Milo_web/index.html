@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Milo — Your room has a face</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nlogo">mi<em>lo</em></div>
+
+    <ul class="nlinks">
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#faces">Faces</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li>
+        <a href="#waitlist" class="ncta">Get early access</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="h-eyebrow">
+        <span class="h-dot"></span>
+        Now sensing your room
+      </div>
+
+      <h1 class="hero-h1">
+        Your room has a<br>
+        <strong>
+          <span class="hero-word" id="rotWord">face.</span>
+        </strong>
+      </h1>
+
+      <p class="hero-sub">
+        Milo sits on your desk, reads the room, and tells you how it feels —
+        temperature, air quality, sound. No subscription. No account.
+        Just a face that tells the truth.
+      </p>
+
+      <div class="hbtns">
+        <a href="#waitlist" class="hb1">Get early access</a>
+        <a href="#how" class="hb2">See how it works →</a>
+      </div>
+
+
+      <div class="device-scene">
+
+        <div class="fp fpa">
+
+          <div class="fp-row">
+            <span class="fp-dot" style="background:#d4913a"></span>
+            <span class="fp-lbl">Temperature</span>
+            <span class="fp-val">22.4°C</span>
+          </div>
+
+          <div class="fp-row">
+            <span class="fp-dot" style="background:#7a9480"></span>
+            <span class="fp-lbl">Humidity</span>
+            <span class="fp-val">45%</span>
+          </div>
+
+        </div>
+
+
+        <div class="fp fpb">
+
+          <div class="fp-row">
+            <span class="fp-dot" style="background:#7a9480"></span>
+            <span class="fp-lbl">Air quality</span>
+            <span class="fp-val">Good</span>
+          </div>
+
+        </div>
+
+
+        <div class="fp fpc">
+
+          <div class="fp-row">
+            <span class="fp-dot" style="background:#b8935a"></span>
+            <span class="fp-lbl">Sound</span>
+            <span class="fp-val">Keyboard</span>
+          </div>
+
+          <div class="fp-row">
+            <span class="fp-dot" style="background:#bbb"></span>
+            <span class="fp-lbl">Room state</span>
+            <span class="fp-val">Normal</span>
+          </div>
+
+        </div>
+
+
+        <div class="device">
+
+          <div class="oled">
+            <svg
+              id="heroSvg"
+              width="164"
+              height="82"
+              viewBox="0 0 164 82">
+            </svg>
+          </div>
+
+        </div>
+
+
+        <div class="state-tag">
+          Milo feels
+          <span class="state-pill" id="statePill">content</span>
+        </div>
+
+      </div>
+
+
+      <div class="stats rv">
+
+        <div class="stat">
+          <div class="stat-n">4</div>
+          <div class="stat-l">sensors always watching</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-n">2</div>
+          <div class="stat-l">AI models, fully on-device</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-n">6</div>
+          <div class="stat-l">face states</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-n"><em>0</em></div>
+          <div class="stat-l">subscriptions or accounts</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section class="sec-how" id="how">
+
+    <div class="how-layout">
+
+      <div class="rv">
+
+        <div class="sec-eyebrow">How it works</div>
+
+        <h2>
+          Sense. Think.<br>
+          Show the face.
+        </h2>
+
+        <p class="body-txt">
+          Everything happens on the device itself. Milo doesn't send your
+          data anywhere — two AI models run privately, right on the chip.
+          What you see on the face is what your room actually is.
+        </p>
+
+      </div>
+
+
+      <div class="how-steps">
+
+        <div class="hstep rv">
+
+          <span class="hstep-num">01</span>
+
+          <div>
+            <div class="hstep-t">Reads the room constantly</div>
+
+            <p class="hstep-d">
+              Four sensors measure temperature, humidity, air quality,
+              and sound — updating every two seconds, around the clock.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="hstep rv rd1">
+
+          <span class="hstep-num">02</span>
+
+          <div>
+            <div class="hstep-t">Hears what's happening</div>
+
+            <p class="hstep-d">
+              Milo recognises silence, typing, voices, and sudden noise —
+              understanding the energy of the room, not just the temperature.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="hstep rv rd2">
+
+          <span class="hstep-num">03</span>
+
+          <div>
+            <div class="hstep-t">Learns your room's normal</div>
+
+            <p class="hstep-d">
+              Over the first week, Milo learns what your specific room
+              usually feels like. After that, it knows when something is off.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="hstep rv rd3">
+
+          <span class="hstep-num">04</span>
+
+          <div>
+            <div class="hstep-t">Shows you the face</div>
+
+            <p class="hstep-d">
+              One of six expressions appears on the display — updated
+              in real time. Glance at Milo and you know.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FACE STATES -->
+  <section class="sec-faces" id="faces">
+
+    <div class="container">
+
+      <div class="faces-intro rv">
+
+        <div>
+
+          <div class="sec-eyebrow">Face states</div>
+
+          <h2 style="margin-bottom:0">
+            Six faces. One truth.
+          </h2>
+
+        </div>
+
+        <p class="body-txt" style="max-width:300px">
+          Every face is a precise read on your room.
+          No interpretation needed — Milo says it plainly.
+        </p>
+
+      </div>
+
+
+      <div class="faces-grid">
+
+        <div class="fcard rv">
+          <div class="foled">
+            <svg width="72" height="36" viewBox="0 0 72 36" id="sf0"></svg>
+          </div>
+          <div class="fname">Content</div>
+          <div class="fdesc">
+            Everything is balanced. Temperature, air, sound — all good.
+          </div>
+        </div>
+
+
+        <div class="fcard rv rd1">
+          <div class="foled">
+            <svg width="72" height="36" viewBox="0 0 72 36" id="sf1"></svg>
+          </div>
+          <div class="fname">Warm</div>
+          <div class="fdesc">
+            Room is getting too hot. Open a window.
+          </div>
+        </div>
+
+
+        <div class="fcard rv rd2">
+          <div class="foled">
+            <svg width="72" height="36" viewBox="0 0 72 36" id="sf2"></svg>
+          </div>
+          <div class="fname">Stuffy</div>
+          <div class="fdesc">
+            Air quality is dropping. The room needs ventilation.
+          </div>
+        </div>
+
+
+        <div class="fcard rv">
+          <div class="foled">
+            <svg width="72" height="36" viewBox="0 0 72 36" id="sf3"></svg>
+          </div>
+          <div class="fname">Alert</div>
+          <div class="fdesc">
+            Something unusual is happening. Multiple readings are outside
+            your normal range.
+          </div>
+        </div>
+
+
+        <div class="fcard rv rd1">
+          <div class="foled">
+            <svg width="72" height="36" viewBox="0 0 72 36" id="sf4"></svg>
+          </div>
+          <div class="fname">Stressed</div>
+          <div class="fdesc">
+            Loud or sustained noise. High-energy environment detected.
+          </div>
+        </div>
+
+
+        <div class="fcard rv rd2">
+          <div class="foled">
+            <svg width="72" height="36" viewBox="0 0 72 36" id="sf5"></svg>
+          </div>
+          <div class="fname">Sleepy</div>
+          <div class="fdesc">
+            Prolonged silence. The room is calm and still.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="sec-specs" id="features">
+
+    <div class="specs-layout">
+
+      <div class="rv">
+
+        <div class="sec-eyebrow">What Milo does</div>
+
+        <h2>
+          Built to sit quietly<br>
+          and tell the truth.
+        </h2>
+
+        <p class="body-txt">
+          Milo is a physical device that fits on any desk.
+          Plug it in and it starts working immediately —
+          no setup, no account, no ongoing cost.
+        </p>
+
+        <div class="feat-list">
+
+          <div class="feat-row">
+            <span class="feat-icon">🌡️</span>
+            <div>
+              <div class="feat-title">Always knows the temperature</div>
+              <p class="feat-desc">
+                Tracks room temperature and humidity continuously.
+              </p>
+            </div>
+          </div>
+
+          <div class="feat-row">
+            <span class="feat-icon">💨</span>
+            <div>
+              <div class="feat-title">Detects stale air before you feel it</div>
+              <p class="feat-desc">
+                Monitors air quality in real time.
+              </p>
+            </div>
+          </div>
+
+          <div class="feat-row">
+            <span class="feat-icon">👂</span>
+            <div>
+              <div class="feat-title">Hears the room</div>
+              <p class="feat-desc">
+                Recognises silence, typing, voices, and noise.
+              </p>
+            </div>
+          </div>
+
+          <div class="feat-row">
+            <span class="feat-icon">🧠</span>
+            <div>
+              <div class="feat-title">Learns your room's normal</div>
+              <p class="feat-desc">
+                Milo learns your room's baseline and notices when
+                something is different.
+              </p>
+            </div>
+          </div>
+
+          <div class="feat-row">
+            <span class="feat-icon">🔒</span>
+            <div>
+              <div class="feat-title">Everything stays on the device</div>
+              <p class="feat-desc">
+                No data is sent to a server for Milo's sensing and AI.
+              </p>
+            </div>
+          </div>
+
+          <div class="feat-row">
+            <span class="feat-icon">🔌</span>
+            <div>
+              <div class="feat-title">One cable. That's it.</div>
+              <p class="feat-desc">
+                Plug into USB and Milo starts immediately.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="spec-right rv rd1">
+
+        <div class="spec-device-card">
+
+          <div class="spec-dev">
+
+            <div class="spec-oled">
+              <svg
+                id="specSvg"
+                width="122"
+                height="61"
+                viewBox="0 0 122 61">
+              </svg>
+            </div>
+
+          </div>
+
+
+          <div class="promise-grid">
+
+            <div class="promise">
+              <div class="promise-icon">⚡</div>
+              <div class="promise-title">Instant on</div>
+              <p class="promise-desc">
+                Plug in and Milo starts sensing immediately.
+              </p>
+            </div>
+
+            <div class="promise">
+              <div class="promise-icon">🛡️</div>
+              <div class="promise-title">Fully private</div>
+              <p class="promise-desc">
+                No account or cloud needed for sensing.
+              </p>
+            </div>
+
+            <div class="promise">
+              <div class="promise-icon">📐</div>
+              <div class="promise-title">Desk-sized</div>
+              <p class="promise-desc">
+                Small enough to sit anywhere.
+              </p>
+            </div>
+
+            <div class="promise">
+              <div class="promise-icon">📊</div>
+              <div class="promise-title">Dashboard included</div>
+              <p class="promise-desc">
+                Full history and live readings in your browser.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DASHBOARD PREVIEW -->
+  <section class="sec-dashboard" id="dashboard">
+
+    <div class="dashboard-layout">
+
+      <div class="rv">
+
+        <div class="sec-eyebrow">Web dashboard</div>
+
+        <h2>
+          Numbers for those<br>
+          who want them.
+        </h2>
+
+        <p class="body-txt">
+          Milo's face tells the story. But if you want the full picture —
+          live readings, history, and trends — the dashboard has it.
+        </p>
+
+        <br>
+
+        <p class="body-txt">
+          No login. No account. Just open it and the data is there.
+        </p>
+
+      </div>
+
+
+      <div class="rv rd1">
+
+        <div class="dash-preview">
+
+          <div class="dash-bar">
+            <div class="dash-dot" style="background:#f87171"></div>
+            <div class="dash-dot" style="background:#fbbf24"></div>
+            <div class="dash-dot" style="background:#7a9480"></div>
+          </div>
+
+          <div class="dash-body">
+
+            <div class="dash-grid">
+
+              <div class="dash-card">
+                <div class="dash-label">Temperature</div>
+                <div class="dash-val">22.4<em>°C</em></div>
+              </div>
+
+              <div class="dash-card">
+                <div class="dash-label">Humidity</div>
+                <div class="dash-val">45<em>%</em></div>
+              </div>
+
+              <div class="dash-card">
+                <div class="dash-label">Air Quality</div>
+                <div class="dash-val" style="color:var(--sage);font-size:18px">
+                  Good
+                </div>
+              </div>
+
+              <div class="dash-card">
+                <div class="dash-label">Sound</div>
+                <div class="dash-val" style="font-size:16px">
+                  Typing
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="dash-chart">
+
+              <div class="dash-chart-label">
+                Temperature — last 24 hours
+              </div>
+
+              <div class="chart-bars">
+
+                <div class="cb" style="height:55%"></div>
+                <div class="cb" style="height:60%"></div>
+                <div class="cb" style="height:52%"></div>
+                <div class="cb" style="height:70%"></div>
+                <div class="cb" style="height:80%"></div>
+                <div class="cb" style="height:75%"></div>
+                <div class="cb" style="height:65%"></div>
+                <div class="cb" style="height:72%"></div>
+                <div class="cb" style="height:68%"></div>
+                <div class="cb" style="height:90%"></div>
+                <div class="cb" style="height:85%"></div>
+                <div class="cb" style="height:78%"></div>
+                <div class="cb" style="height:70%"></div>
+                <div class="cb" style="height:60%"></div>
+                <div class="cb" style="height:55%"></div>
+                <div class="cb" style="height:50%"></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="dash-status">
+              <div class="online-dot"></div>
+              Milo is online · updated just now
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- USE CASES -->
+  <section class="sec-use" id="use">
+
+    <div class="container">
+
+      <div class="rv" style="max-width:480px">
+
+        <div class="sec-eyebrow">Who it's for</div>
+
+        <h2>
+          Works wherever<br>
+          you work.
+        </h2>
+
+      </div>
+
+
+      <div class="use-grid">
+
+        <div class="ucard rv">
+          <span class="uicon">🏠</span>
+          <div class="utitle">Home desk</div>
+          <p class="ubody">
+            Know when your space needs a break before the headache hits.
+          </p>
+        </div>
+
+        <div class="ucard rv rd1">
+          <span class="uicon">🏢</span>
+          <div class="utitle">Office</div>
+          <p class="ubody">
+            An instant read on meeting rooms and shared spaces.
+          </p>
+        </div>
+
+        <div class="ucard rv rd2">
+          <span class="uicon">🔬</span>
+          <div class="utitle">Lab & studio</div>
+          <p class="ubody">
+            Ambient awareness for environments that demand focus.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WAITLIST -->
+  <section class="sec-waitlist" id="waitlist">
+
+    <div class="wl-inner rv">
+
+      <div class="sec-eyebrow">Early access</div>
+
+      <h2>
+        Be first when<br>
+        Milo ships.
+      </h2>
+
+      <p class="body-txt">
+        We're building Milo for homes and offices.
+        Leave your email and we'll reach you before anyone else.
+      </p>
+
+
+      <div class="wl-card">
+
+        <div class="wl-lbl">Reserve your spot</div>
+
+        <p class="wl-note">
+          No spam. One email when we're ready.
+        </p>
+
+
+        <div class="wl-row">
+
+          <input
+            class="wl-in"
+            type="email"
+            id="wlEmail"
+            placeholder="your@email.com"
+            autocomplete="email"
+          >
+
+          <!-- IMPORTANT: NO onclick HERE -->
+          <button
+            class="wl-btn"
+            id="joinWaitlistBtn"
+            type="button">
+            Join waitlist
+          </button>
+
+        </div>
+
+
+        <p class="wl-err" id="wlErr">
+          Enter a valid email address.
+        </p>
+
+        <p class="wl-fine">
+          Unsubscribe anytime.
+        </p>
+
+        <p class="wl-ok" id="wlOk">
+          ✓ You're on the list — we'll be in touch.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="flogo">mi<em>lo</em></div>
+
+    <div class="flinks">
+      <a href="#how">How it works</a>
+      <a href="#faces">Faces</a>
+      <a href="#features">Features</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#waitlist">Waitlist</a>
+    </div>
+
+    <div class="fcopy">
+      © 2026 Milo. Pre-launch.
+    </div>
+
+  </footer>
+
+
+  <!-- SUPABASE MUST LOAD FIRST -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- THEN YOUR JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
